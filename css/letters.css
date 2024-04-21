@@ -144,7 +144,29 @@ body{
   justify-content: center;
   padding: 2rem;
   margin-top: 70px;
-  margin-left: 180px;
+  margin-left: 100px;
+}
+
+.nav {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: 550px;
+  padding: 8px;
+}
+.nav img {
+  padding: 8px;
+  max-width: 120px;
+  height: 65px;
+  background: white;
+}
+.nav button {
+  /* background: transparent; */
+  border: none;
+  background-color: transparent;
 }
 
 .modal {
