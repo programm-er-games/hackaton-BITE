@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  font-family: "Merriweather Sans", sans-serif;
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  --color: rgba(98, 118, 95, 0.224);
+  background-color: #9eb383;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+}
+
+.circl {
+  width: 30px;
+  height: 30px;
+  background: #9eb383;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 2px solid #ffffff8c;
+}
+
+/*  */
+.form {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 650px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  z-index: 1;
+  transform: translate(70%, 22%);
+  /* margin: auto; */
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #73d200;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #73d200;
+}
+
+.message,
+.signin {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.signin a {
+  color: #73d200;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input+span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+  color: #73d200;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: .2s ease;
+  background-color: #73d200;
+}
+
+.submit:hover {
+  background-color: #3f7200;
+}
+
+
+
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+h1 {
+  color: #73d200;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 100px 0;
+
+}
+
+
+.input1 {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background-color: #0d1117;
+  justify-content: center;
+  border-radius: 30px;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+.value1 {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: rgb(82, 245, 0);
+  display: flex;
+  position: relative;
+  gap: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 10px 0 10px;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  color: white;
+  display: flex;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 10px 0 10px;
+}
+
+.value:not(:active):hover,
+.value:focus {
+  background-color: #314b445c;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.value:focus,
+.value:active {
+  background-color: #2b422c;
+  outline: none;
+  transition: .1s;
+}
+
+/* .value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 5px;
+  height: 80%;
+  background-color: #767676;
+  border-radius: 5px;
+  opacity: 0;
+} */
+
+.value:focus::before,
+.value:active::before {
+  opacity: 1;
+}
+
+.value svg {
+  width: 15px;
+}
