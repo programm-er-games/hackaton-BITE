@@ -10,6 +10,31 @@
 
 <body>
 
+<div class="input1">
+    <div class="value1">
+      SBERDiary
+    </div>
+    <button class="value">
+      <a href="come_in.php" class="link">Вход/Выход</a>
+    </button>
+    <button class="value">
+      <a href="firspage.php" class="link">Дневник</a>
+    </button>
+    <button class="value">
+      <a href="support.html" class="link">Поддержка</a>
+    </button>
+    <button class="value">
+      <a href="letters.html" class="link">Почта</a>
+    </button>
+    <button class="value">
+      <a href="settings.html" class="link">ADMIN</a>
+      <div class="circl"></div>
+    </button>
+  </div>
+
+
+
+
 
 
   <div class="card-id567">
@@ -46,7 +71,7 @@
       <input required="" placeholder="" type="password" name="password" class="input">
       <span>Пароль</span>
     </label>
-    <p id="sign_in_message"><? echo $result; ?></p>
+    <p id="sign_in_message" style="color: white;"><? echo $result; ?></p>
     <button class="submit" type="submit">Войти</button>
     <p class="signin">Для того чтобы зарегистрироваться, нажмите -> <a href="index.php">Регистрация</a> </p>
   </form>

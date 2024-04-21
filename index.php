@@ -14,22 +14,27 @@
       SBERDiary
     </div>
     <button class="value">
-      <a href="come_in.php" class="link">Вход/Выход</a>
+      <a href="come_in.php" class="link" style="text-decoration: none; color: white;">Вход/Выход</a>
     </button>
     <button class="value">
-      <a href="firspage.php" class="link">Дневник</a>
+      <a href="firspage.php" class="link" style="text-decoration: none; color: white;">Дневник</a>
     </button>
     <button class="value">
-      <a href="support.html" class="link">Поддержка</a>
+      <a href="support.html" class="link" style="text-decoration: none; color: white;">Поддержка</a>
     </button>
     <button class="value">
-      <a href="letters.html" class="link">Почта</a>
+      <a href="letters.html" class="link" style="text-decoration: none; color: white;">Почта</a>
     </button>
     <button class="value">
-      <a href="settings.html" class="link">ADMIN</a>
+      <a href="settings.html" class="link" style="text-decoration: none; color: white;">ADMIN</a>
       <div class="circl"></div>
     </button>
   </div>
+
+
+
+
+
 
   <form class="form" action="backend/register.php" method="post">
     <p class="title">Регистрация</p>

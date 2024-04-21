@@ -32,6 +32,21 @@ body{
   margin-left: 150px;
   
 }
+.value {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  color: white;
+  display: flex;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 10px 0 10px;
+  font-size: medium;
+}
 .value1{
   background-color: transparent;
   border: none;
