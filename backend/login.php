@@ -31,12 +31,14 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         $user = $main_conn->get("parents", ["password"], ["email" => $email]);
         if ($user[0][0] == $password) {
             $result = "Успешно!";
+            setcookie('is_auth', 'yes', time() + (86400 * 30), '/hackathon');
             header("Location: ../firspage.php");
         } else {
             $result = "Неверный пароль!";
             header("Location: ../come_in.php");
         }
     }
+    setcookie('is_auth', 'no', time() + (86400 * 30), '/hackathon');
     setcookie("sign_in_res", $result, time() + 360, "/hackathon");
     echo $result;
 }

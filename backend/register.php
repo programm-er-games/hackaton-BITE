@@ -11,7 +11,7 @@ $main_conn->start([
 ], true);
 
 $result;
-
+if (!isset($_COOKIE['is_auth'])) setcookie('is_auth', 'no', time() + (86400 * 30), '/hackathon');
 if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['patronymic']) 
     && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['password'])
     && isset($_POST['confirm_password']) && isset($_POST['birthday'])) {

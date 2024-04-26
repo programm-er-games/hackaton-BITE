@@ -1,3 +1,6 @@
+<?php
+include('backend/check_cookie.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +20,7 @@
     <button class="value">
       <a href="come_in.php" class="link">Вход/Выход</a>
     </button>
+    <?php if ($access) : ?>
     <button class="value">
       <a href="firspage.php" class="link">Дневник</a>
     </button>
@@ -30,6 +34,7 @@
       <a href="settings.html" class="link">ADMIN</a>
       <div class="circl"></div>
     </button>
+    <?php endif; ?>
   </div>
 
 
@@ -84,6 +89,10 @@
     }
     let in_mes = getCookie("sign_in_res");
     document.getElementById("sign_in_message").textContent = in_mes === undefined ? "" : in_mes;
+    if (getCookie('is_auth') == 'no') {
+      var temp = document.getElementsByClassName('link');
+      temp.href = '';
+    }
   </script>
 </body>
 
